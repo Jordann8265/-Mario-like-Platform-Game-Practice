@@ -1,0 +1,100 @@
+/* Basic Resets & Body Styling */
+body, html {
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /* Prevents scrollbars if content exceeds viewport */
+    height: 100%; /* Make sure body and html take full viewport height */
+    display: flex; /* Use flexbox to center the game container */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    background-color: #333; /* Dark background for the page itself (CHANGE WITH SPRITES TO PREVENT CONTRAST) */ 
+    font-family: "Inter", sans-serif; /* Using Inter font for consistency */
+}
+
+/* Game Container Styling */
+#game-container {
+    width: 800px; /* Width of hte game world */
+    height: 400px; /* Height of the game world */
+    background-color: #87CEEB; 
+    border: 2px solid #555; /* A border to define the game area */
+    position: relative; 
+    overflow: hidden; /* Hides anything that goes outside the game container */
+    border-radius: 8px; /* (REMEMBER FOR FUTURE PROJECTS) Rounded corners for the game container */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+}
+
+/* Player Styling */
+#player {
+    width: 30px; /* Width of player character */
+    height: 30px; /* Height of player character */
+    background-color: #E74C3C; 
+    position: absolute; 
+    left: 50px; /* Starting horizontal position */
+    bottom: 0; /* Starting vertical position, resting on the ground */
+    border-radius: 4px; /* (REMEMBER FOR FUTURE PROJECTS) Slightly rounded player */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); 
+}
+
+/* Common Platform/Block Styling */
+.platform, .block {
+    background-color: #6B4226; /* Brown color for ground and blocks */
+    position: absolute; 
+    border: 1px solid #4A2C1B; 
+    border-radius: 4px; /* Rounded corners for platforms/blocks */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); 
+}
+
+/* Ground Platform Styling */
+#ground {
+    width: 100%; /* Ground stretches across the entire game container */
+    height: 40px; /* Height of the ground */
+    left: 0; /* Starts from the left edge */
+    bottom: 0; /* Rests at the bottom of the game container */
+    border-bottom-left-radius: 8px; 
+    border-bottom-right-radius: 8px; 
+}
+
+/* Individual Floating Block Styling */
+#block-1 {
+    width: 70px; /* Width of the first block */
+    height: 40px; /* Height of the first block */
+    left: 200px; 
+    bottom: 80px; 
+}
+
+#block-2 {
+    width: 75px; /* Slightly wider */
+    height: 55px; /* Taller than block-1 */
+    left: 350px; 
+    bottom: 150px; 
+}
+
+#block-3 {
+    width: 80px; /* Slightly wider */
+    height: 70px; /* Taller than block-2 */
+    left: 500px; 
+    bottom: 230px; 
+}
+
+/* Lightning Bolt Styling (SCOUR INTERNET FOR MORE ACCURATE STYLING WTHOUT USE OF SPRITES) */
+#lightning-bolt {
+    width: 20px; /* Width of the lightning bolt */
+    height: 5px; /* Height (thickness) of the lightning bolt */
+    background-color: #9B59B6; 
+    position: absolute; 
+    display: none; /* Initially hidden, JavaScript will show it when fired */
+    border-radius: 2px; 
+    box-shadow: 0 0 8px #9B59B6; /* A glow effect (NEEDS MORE WORK) */
+}
+
+/* Side Character Styling (NEED TO ADJUST POSITIONING WHEN TIME ALLOWS) */
+#side-character {
+    width: 40px; 
+    height: 60px; 
+    background-color: #2ECC71; 
+    position: absolute; 
+    right: 50px; 
+    bottom: 0; /* Rests on the ground (NEEDS FIX)*/
+    border-radius: 8px 8px 4px 4px; 
+    box-shadow: -2px 2px 5px rgba(0, 0, 0, 0.3); 
+}
