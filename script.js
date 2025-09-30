@@ -26,6 +26,7 @@ const platforms = [ground, block1, block2, block3];
 
 
 // 2. Player State Variables
+// This is a comment
 
 
 let playerX = player.offsetLeft; // Current X position (from left)
